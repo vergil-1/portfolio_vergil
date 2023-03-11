@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css" >
+        <script src="https://kit.fontawesome.com/fce8ac7fd7.js" crossorigin="anonymous"></script>   
+         
+    </head>
+
+    <body>
+        <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/gsc-logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-sharp fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+            <p>Hi, I'm Vergil</p>
+            <h1> <span>If you don't take risk,<br>You can't create a future</h1></span>
+
+        </div>
+        </div>
+    </div>
+
+    <!-----About----->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/ver.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        To obtain a position in an institution that enables me to utilize my educational background, ability to work well with people to hone my knowledge and skills for personal growth and development.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('name')">Name</p>
+                        <p class="tab-links" onclick="opentab('age')">Age</p>
+                        <p class="tab-links " onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('educational background')">Educational Background</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="name">
+                        <ul>
+                            <li><span>Vergil Jardin</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="age">
+                        <ul>
+                            <li><span>23 Year's Old</span></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Hardworking</span></li>
+                            <li><span>Optimistic</span></li>
+                            <li><span>Customer Oriented</span></li>
+                            <li><span>Can perform task cheerfully with attitude</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="educational background">
+                        <ul>
+                            <li>Junior High:<span> City Central School</span><br>2012/2013</li>
+                            <li>Senior High:<span> Golden Success College</span><br>2017/2018</li>
+                            <li>College:<span> Golden Success College</span><br>School Attended</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------contact--------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i> contact@vergiljardin@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>0932 947 3172</p>
+                    <div class="social-icons">
+                        <a href="http://facebook.com/jardinvergil"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="http://instagram.com/jokervergil"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="http://tiktok.com/@jokervergil"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script> 
+    <script>
+
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+    </body>
+</html>
